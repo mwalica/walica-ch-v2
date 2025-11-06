@@ -10,6 +10,6 @@
         Edukacja
     </flux:badge>
     <flux:container class="w-min">
-        <img class="border-18 border-white max-w-2xl shadow-2xl" src="{{asset('images/greece24_1.jpg')}}" alt="">
+        <img class="border-18 border-white max-w-2xl shadow-2xl" src="{{Storage::url($photo->photo_path)}}" alt="{{$photo->title}}">
     </flux:container>
 </div>
