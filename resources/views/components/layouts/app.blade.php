@@ -19,16 +19,21 @@
         <flux:navbar.item href="/">Home</flux:navbar.item>
         <flux:navbar.item href="/about">O mnie</flux:navbar.item>
         <flux:navbar.item href="/photostock">Photostock</flux:navbar.item>
-    </flux:navbar>
-    <flux:navbar class="ms-16">
-        @auth
-            <flux:navbar.item href="/admin/photo/create">Dodaj zdjęcie</flux:navbar.item>
-            <flux:navbar.item href="/logout" icon="arrow-right-start-on-rectangle" label="Logout">Logout
-            </flux:navbar.item>
-        @endauth
-        @guest
-            <flux:navbar.item href="/login" icon="arrow-right-end-on-rectangle" label="Login">Login</flux:navbar.item>
-        @endguest
+        <flux:dropdown class="max-lg:hidden">
+            <flux:navbar.item icon:trailing="chevron-down">Admin</flux:navbar.item>
+            <flux:navmenu>
+                @auth
+                    <flux:navbar.item href="/admin/photo/create" label="Create" :current="false">Dodaj zdjęcie</flux:navbar.item>
+                    <flux:navbar.item href="/admin/photo/list" label="Photos" :current="false">Zdjęcia</flux:navbar.item>
+                    <flux:navbar.item href="/logout" icon="arrow-right-start-on-rectangle" label="Logout" :current="false">Logout
+                    </flux:navbar.item>
+                @endauth
+                @guest
+                    <flux:navbar.item href="/login" icon="arrow-right-end-on-rectangle" label="Login" :current="false">Login
+                    </flux:navbar.item>
+                @endguest
+            </flux:navmenu>
+        </flux:dropdown>
     </flux:navbar>
 </flux:header>
 {{-- Mobile sidebar --}}
@@ -52,7 +57,7 @@
     </flux:sidebar.nav>
     <flux:sidebar.spacer/>
 </flux:sidebar>
-<flux:main container class="flex-grow">
+<flux:main container class="flex-grow flex justify-center">
     {{ $slot }}
 </flux:main>
 <footer class="flex py-4 justify-center">

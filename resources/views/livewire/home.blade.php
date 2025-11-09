@@ -9,7 +9,9 @@
             class="w-2 h-2 bg-sky-300 rounded-full"></div>&nbsp;&nbsp;
         Edukacja
     </flux:badge>
-    <flux:container class="w-min">
-        <img class="border-18 border-white max-w-2xl shadow-2xl" src="{{Storage::url($photo->photo_path)}}" alt="{{$photo->title}}">
-    </flux:container>
+    @if(isset($photo->photo_path))
+        <flux:container class="w-min">
+            <img class="border-18 border-white max-w-2xl shadow-2xl" src="{{Storage::url($photo->photo_path)}}" alt="{{$photo->title}}">
+        </flux:container>
+    @endif
 </div>
