@@ -13,7 +13,7 @@
 <div class="h-1 bg-gradient-to-r from-violet-600 via-red-500  to-orange-500"></div>
 {{-- Header --}}
 <flux:header
-    class="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 flex items-center justify-center">
+    class="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 flex items-center justify-center w-full">
     <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left"/>
     <flux:navbar class="-mb-px max-lg:hidden gap-8">
         <flux:navbar.item href="/">Home</flux:navbar.item>

@@ -4,7 +4,7 @@
         subtitle=""/>
     <ul role="list" class="divide-y divide-gray-200">
         @forelse($photos as $photo)
-            <li class="flex items-center justify-between gap-x-6 py-5">
+            <li class="flex items-center justify-between gap-x-6 py-5" wire:key="{{$photo->id}}">
                 <div class="min-w-0">
                     <div class="flex items-start gap-x-3">
                         <p class="text-sm/6 font-semibold text-gray-900">{{$photo->title}}</p>
@@ -13,7 +13,7 @@
                         @endif
                     </div>
                     <div class="mt-1 flex items-center gap-x-2 text-xs/5 text-gray-500">
-                        <p class="whitespace-nowrap">{{$photo->photo_path}}</p>
+                        <p class="whitespace-nowrap text-blue-800">{{Str::after($photo->photo_path, 'photos/')}}</p>
                     </div>
                 </div>
                 <div class="flex flex-none items-center gap-x-4">
