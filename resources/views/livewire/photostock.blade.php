@@ -1,4 +1,4 @@
-<div class="w-full md:w-6xl mt-12">
+<div class="w-full md:w-6xl mt-0 md:mt-12">
     <div class="flex flex-col gap-8">
         <livewire:page-title
             title="Photostock"

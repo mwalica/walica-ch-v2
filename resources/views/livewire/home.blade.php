@@ -1,5 +1,5 @@
 <div class="flex flex-col items-center gap-10">
-    <h1 class="text-2xl md:text-5xl font-semibold text-zinc-700 mt-8">Marek Walica <span
+    <h1 class="text-3xl md:text-5xl font-semibold text-zinc-700 mt-8">Marek Walica <span
             class="bg-gradient-to-br from-blue-500 to-sky-300 bg-clip-text text-transparent">Portfolio</span>
     </h1>
     <flux:badge
