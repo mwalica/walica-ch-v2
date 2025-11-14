@@ -20,7 +20,7 @@ class PhotoForm extends Form
     {
         $this->validate();
         $this->photo_path = $this->photo->store('photos', 'public');
-        if (!empty($link)) {
+        if (!empty($this->link)) {
             Photo::create($this->only(['title', 'photo_path', 'link']));
             return;
         }

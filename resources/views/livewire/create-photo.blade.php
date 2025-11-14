@@ -11,7 +11,6 @@
         <flux:field>
             <flux:label>Link (opcjonalnie)</flux:label>
             <flux:input wire:model="form.link"/>
-            <flux:error name="form.link"/>
         </flux:field>
         <flux:field>
             <flux:label>Zdjęcie</flux:label>
