@@ -10,6 +10,7 @@
                         <p class="text-sm/6 font-semibold text-gray-900">{{$photo->title}}</p>
                         @if($photo->link)
                         <p class="mt-0.5 rounded-md bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">Link</p>
+                            <p>{{$photo->link}}</p>
                         @endif
                     </div>
                     <div class="mt-1 flex items-center gap-x-2 text-xs/5 text-gray-500">
