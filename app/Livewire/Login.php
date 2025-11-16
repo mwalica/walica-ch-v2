@@ -23,7 +23,7 @@ class Login extends Component
 
         if ($valid) {
             session()->regenerate();
-            $this->redirectIntended(navigate: true);
+            $this->redirectIntended('/admin/photo/list', navigate: true);
         } else {
             $this->loginMsg = 'Incorrect email and/or password';
         }

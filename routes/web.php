@@ -18,5 +18,5 @@ Route::get('/logout', function () {
     session()->regenerateToken();
     return redirect()->route('login');
 });
-Route::get('/admin/photo/create', CreatePhoto::class)->name('admin.photo.create')->middleware('auth');
-Route::get('/admin/photo/list', PhotosList::class)->name('admin.photo.list')->middleware('auth');
+Route::get('/admin/photo/create', CreatePhoto::class)->name('admin.photo.create')->middleware('auth')->name('admin.photo.create');
+Route::get('/admin/photo/list', PhotosList::class)->name('admin.photo.list')->middleware('auth')->name('admin.photo.list');

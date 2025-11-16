@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 md:grid-cols-2 max-w-5xl">
+<div class="grid grid-cols-1 md:grid-cols-2 max-w-5xl mt-0 md:mt-12">
     <div class="flex flex-col gap-8">
        <livewire:page-title title="O mnie" subtitle="Życiowe pasje <span class='text-blue-800'>muzyka i fotografia</span>"/>
         <p>Werset z najważniejszej dla mnie Księgi: <br/><span class="text-gray-800">Powierz Bogu drogę swoją, Zaufaj mu, a On wszystko dobrze uczyni</span>
