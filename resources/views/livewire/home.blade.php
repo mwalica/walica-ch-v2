@@ -10,8 +10,18 @@
         Edukacja
     </flux:badge>
     @if(isset($photo->photo_path))
-        <div class="flex justify-center">
-            <img class="border-0 md:border-12 border-white w-3xl max-w-[90%] shadow-2xl" src="{{Storage::url($photo->photo_path)}}" alt="{{$photo->title}}">
+        <div class="flex flex-col gap-2 justify-center relative ">
+            @if($photo->link)
+                <a
+                    href="{{$photo->link}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="absolute top-4 start-5 text-white/85">
+                    <flux:icon.external-link/>
+                </a>
+            @endif
+            <img class="border-0 md:border-12 border-white w-3xl max-w-[90%] shadow-2xl"
+                 src="{{Storage::url($photo->photo_path)}}" alt="{{$photo->title}}">
         </div>
     @endif
 </div>
