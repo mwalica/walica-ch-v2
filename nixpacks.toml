@@ -1,5 +1,8 @@
 [variables]
-PHP_VERSION = "8.2"  # zmień na swoją wersję
+NIXPACKS_PHP_VERSION = "8.3"
+
+[phases.install]
+cmds = ["composer install --optimize-autoloader --no-dev --no-scripts --no-interaction"]
 
 [start]
 cmd = "php artisan migrate --force && php-fpm & nginx -g 'daemon off;'"
