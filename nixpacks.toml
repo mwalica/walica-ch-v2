@@ -1,0 +1,5 @@
+[variables]
+PHP_VERSION = "8.2"  # zmień na swoją wersję
+
+[start]
+cmd = "php artisan migrate --force && php-fpm & nginx -g 'daemon off;'"
